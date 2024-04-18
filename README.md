@@ -59,7 +59,6 @@ To run tests on all the tiers in isolation do this:
 
 ## How to setup/run/test program 
 1. Tester, first obtain the Acceptance Test plan
- > NOTE: Step 2 needs to be executed only **ONCE** for each machine that runs our e-store
 2. Execute command `npm install` inside of the `estore-ui` directory to install necessary modules
 3. Execute command `mvn compile exec:java` inside of the `estore-api` directory 
 4. Execute command `ng serve --open` inside of the `estore-ui` directory 
