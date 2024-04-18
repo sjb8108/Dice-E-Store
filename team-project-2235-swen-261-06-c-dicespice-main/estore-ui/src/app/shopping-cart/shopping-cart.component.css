@@ -1,0 +1,67 @@
+.dice {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+}
+  
+.new-item {
+    display: inline-block;
+    width: 10rem;
+    padding: 1rem;
+    margin: 1rem;
+    box-sizing: border-box;
+    border-style: solid;
+    background-color: lightgray;
+}
+
+.new-quantity {
+    display: inline-block;
+    width: 10rem;
+    padding: 1rem;
+    margin: 1rem;
+    box-sizing: border-box;
+    border-style: solid;
+    background-color: lightblue;
+}
+
+.decrease-button{
+    background-color: lightgrey;
+    color:  #525252;
+}
+  
+.decrease-button:hover {
+    background-color: #525252;
+    color: white;
+}
+
+.delete-button{
+    background-color: lightgrey;
+    color:  #525252;
+}
+  
+.delete-button:hover {
+    background-color: #525252;
+    color: white;
+}
+
+.add-button{
+    background-color: lightgrey;
+    color:  #525252;
+}
+  
+.add-button:hover {
+    background-color: #525252;
+    color: white;
+}
+
+.add-button{
+    background-color: lightgrey;
+    color:  #525252;
+}
+  
+.add-button:hover {
+    background-color: #525252;
+    color: white;
+}
+

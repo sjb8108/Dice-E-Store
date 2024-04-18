@@ -1,0 +1,10 @@
+<app-die-search></app-die-search>
+
+<div class="dice-menu">
+  <a *ngFor="let die of dice"
+      routerLink="/detail/{{die.id}}">
+      <div>{{die.color}} D{{die.sides}}</div>
+      ${{die.price}}
+  </a>
+</div>
+

@@ -1,0 +1,13 @@
+<h2>My Wishlist</h2>
+
+<ul class="items">
+  <li *ngFor="let item of items">
+    <div>
+      <button type="button" class="delete-button" (click)="delete(item.dice.id)"> X </button>
+      <label class="new-item">{{item.dice.color}} D{{item.dice.sides}} ${{item.dice.price}}</label>
+      <button type="button" class="addtoCart-button" (click)="addToCart(item.dice.id)" >Add to Cart</button>
+    </div>
+  </li>
+</ul>
+
+<button (click)="clearWishlist()"> Clear Wishlist </button>

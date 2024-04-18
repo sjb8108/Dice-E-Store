@@ -1,0 +1,33 @@
+<h2>Checkout</h2>
+
+<div fxLayout='row' fxLayoutWrap class="checkout-page">
+  <div fxFlex="20" class="checkout-card" *ngFor="let item of items">
+    <mat-card>
+      <mat-card-content>
+        <label class="checkout-sides">Sides: D{{item.dice.sides}}</label>
+        <label class="checkout-item">Color: {{item.dice.color}}</label>
+        <label class="checkout-quantity">Quantity: {{item.quantity}}</label>
+        <label class="checkout-price">Individual Price: ${{item.dice.price}}</label>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<mat-card>
+  <mat-card-content>
+    <div class="total">
+      <h3>Tax: ${{calculateTax()}} (%8)</h3>
+      <h3>Shipping: Free</h3>
+      <h3>Subtotal: ${{calculateSubtotal()}}</h3>
+      <h2 class="total-header">Total: ${{calculateTotal()}}</h2>
+    </div>
+    <div class="address">
+      <p>Address: {{address}}</p>
+    </div> 
+    <div class="payment">
+      <p>Card Number: {{creditCard}}  CCV: {{CCV}}</p>
+    </div> 
+    <button type="button" class="edit-button" routerLink="/account">Change Information</button>
+    <button type="button" class="checkout-button" (click)="checkout()" routerLink="/completed-order" >Checkout</button>
+  </mat-card-content>
+</mat-card>

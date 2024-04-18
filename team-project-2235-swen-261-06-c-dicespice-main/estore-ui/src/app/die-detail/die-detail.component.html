@@ -1,0 +1,84 @@
+<div *ngIf="die">
+  <h2>{{die.color | uppercase}} Details</h2>
+  <div><span>id: </span>{{die.id}}</div>
+
+  <div id="detail-holder">
+    <div *ngIf="isAdmin; else colorBlock" class="detail-list">
+      <label for="die-color">Die color: </label>
+      <input id="die-color" [(ngModel)]="die.color" placeholder="Color"/>
+    </div>
+    <ng-template #colorBlock>
+      <label>Die color: </label>
+      <label class="die-quality">{{die.color}}</label>
+    </ng-template>
+
+    <div *ngIf="isAdmin; else sidesBlock" class="detail-list">
+      <label for="die-sides">Number of sides: </label>
+      <input id="die-sides" [(ngModel)]="die.sides" placeholder="Sides"/>
+    </div>
+    <ng-template #sidesBlock>
+      <label>Number of sides: </label>
+      <label class="die-quality">{{die.sides}}</label>
+    </ng-template>
+
+    <div *ngIf="isAdmin; else priceBlock" class="detail-list">
+      <label for="die-price">Price: </label>
+      <input id="die-price" [(ngModel)]="die.price" placeholder="Price"/>
+    </div>
+    <ng-template #priceBlock>
+      <label>Price: </label>
+      <label class="die-quality">{{die.price}}</label>
+    </ng-template>
+
+    <div *ngIf="isAdmin; else quantityBlock" class="detail-list">
+      <label for="die-quantity">Quantity: </label>
+      <input id="die-quantity" [(ngModel)]="die.quantity" placeholder="Quantity"/>
+    </div>
+    <ng-template #quantityBlock>
+      <label for="die-quality">Quantity in Inventory: </label>
+      <label class="die-quality">{{die.quantity}}</label>
+    </ng-template>
+    <div class="detail-list">
+      <label for="die-avg-rating">Average Rating: {{averageRating ? averageRating.toFixed(2) : 'N/A'}}</label>
+      <!-- replace (starReviews) with {{starReviews}} -->
+    </div>
+  </div>
+  
+  <button type="button" (click)="goBack()">Go Back</button>
+  <div *ngIf="isAdmin == false">
+    <button type="button" (click)="addItem()">Add to Cart</button>
+  </div>
+  <div *ngIf="isAdmin == false">
+    <button type="button" (click)="addWishlist()">Add to Wishlist</button>
+  </div>
+  <div *ngIf="isAdmin">
+    <button type="button" (click)="save()">Save</button>
+  </div>
+</div>
+
+<div *ngIf="!isAdmin" class="review-container">
+  <div class="heading">
+    <h1  class="review-title">Leave a Review</h1>
+    <form #myForm="ngForm" (submit)="addStarReview(myForm.value.rating)">
+      <span class="star-rating">
+        <input [(ngModel)]="starReview" type="radio" name="rating" value=1><i></i>
+        <input [(ngModel)]="starReview" type="radio" name="rating" value=2><i></i>
+        <input [(ngModel)]="starReview" type="radio" name="rating" value=3><i></i>
+        <input [(ngModel)]="starReview" type="radio" name="rating" value=4><i></i>
+        <input [(ngModel)]="starReview" type="radio" name="rating" value=5><i></i>
+      </span>
+    <button type="submit" class="starSave-button">Save Rating</button>
+  </form>
+  </div>
+  <input class="review-textarea" [(ngModel)]="review" placeholder="Write your review here..."/>
+  <button class="submit-button" (click)="addReview(review)">Submit Review</button>
+</div>
+
+<ul class="reviews">
+  <li *ngFor="let review of reviews">
+    <div class="ind-review">
+      <label class="new-review">Review: {{review}}</label>
+    </div>
+  </li>
+</ul>
+

@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+<nav>
+  <!-- wrap in div *ngIf='notLoggedIn' -- set up in LoginService similar to isAdmin in AdminService-->
+    <a routerLink="/dashboard">Dashboard</a>
+    <div *ngIf="isAdmin">
+      <a routerLink="/dice">Dice</a>
+    </div>
+    <div *ngIf="!isAdmin">
+      <a routerLink="/shoppingcart">Shopping Cart</a>
+      <a routerLink="/account">Account</a>
+    </div>
+    <div *ngIf="!isAdmin">
+    <a routerLink="/wishlist">Wishlist</a>
+    </div>
+    <a routerLink="/logout">Logout</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>

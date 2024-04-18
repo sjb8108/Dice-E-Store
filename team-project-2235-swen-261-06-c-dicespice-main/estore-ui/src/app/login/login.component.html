@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-title>Login</mat-card-title>
+        <mat-card-content>
+            <label for="username">Username: </label>
+            <input id="username" #username /><br>
+            <label for="password">Password: </label>
+            <input id="password" #password />
+        </mat-card-content>
+    <mat-card-footer>
+        <mat-card-actions>
+            <button type="button" class="login-button" (click)="login(username.value, password.value); username.value=''; password.value=''">Login</button>
+        </mat-card-actions>
+    </mat-card-footer>
+</mat-card>

@@ -1,0 +1,26 @@
+<h2>My Dice</h2>
+
+<div>
+  <label for="new-die">Die color: </label>
+  <input id="new-die" #dieColor />
+  <label for="new-die">Number of Sides: </label>
+  <input id="new-die" #dieSides />
+  <label for="new-die">Price: </label>
+  <input id="new-die" #diePrice />
+  <label for="new-die">Quantity: </label>
+  <input id="new-die" #dieQuantity/>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(dieColor.value, dieSides.value, diePrice.value, dieQuantity.value); dieColor.value=''; dieSides.value=''; diePrice.value=''; dieQuantity.value=''">
+    Add die
+  </button>
+</div>
+
+<ul class="dice">
+  <li *ngFor="let die of dice">
+    <a routerLink="/detail/{{die.id}}">
+      <span class="badge">{{die.id}}</span> {{die.color}}
+    </a>
+    <button type="button" class="delete" title="delete die"
+      (click)="delete(die)">x</button>
+  </li>
+</ul>

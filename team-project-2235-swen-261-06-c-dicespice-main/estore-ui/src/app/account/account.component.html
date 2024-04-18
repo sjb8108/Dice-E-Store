@@ -1,0 +1,26 @@
+<h2>Account</h2>
+
+<mat-card>
+    <mat-card-content>
+      <div class="username">
+        <p>Username: {{username}}</p>
+      </div>
+      <div class="address">
+        <p>Address: </p>
+        <input id="address-input" [(ngModel)]="address" placeholder="{{address}}"/>
+        <button type="button" class="address-button" (click)="setAddress()">Save</button>
+        <button type="button" class="delete-address-button" (click)="clearAddress()">Delete</button>
+      </div> 
+      <div class="payment">
+        <p>Payment: </p>
+        <label for="card-input">Credit Card: </label>
+        <input id="card-input" [(ngModel)]="creditCard" placeholder="{{creditCard}}"/>
+        <label for="ccv-input">CCV: </label>
+        <input id="ccv-input" [(ngModel)]="CCV" placeholder="{{CCV}}"/>
+        <button type="button" class="payment-button" (click)="setCreditCardInfo()">Save</button>
+        <button type="button" class="delete-payment-button" (click)="clearCreditCardInfo()">Delete</button>
+      </div> 
+      <button type="button" class="back-button" (click)="goBack()">Go Back</button>
+    </mat-card-content>
+</mat-card>
+

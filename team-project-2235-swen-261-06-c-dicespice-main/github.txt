@@ -1,0 +1,42 @@
+commit 6e02651f5d58bcf8638474a99119a434cfbab48b
+Author: Nicholas Gouldin <njg5215@rit.edu>
+Date:   Wed Feb 14 18:42:06 2024 -0500
+
+    Added name to read me file
+
+commit f5bca9c591b367e583f8f7c9c33c2d857a8f2ac4
+Author: Scott Bullock <sjb8108@g.rit.edu>
+Date:   Tue Feb 13 19:16:17 2024 -0500
+
+    Scott name added to README
+
+commit bd2ed85bdb98d94ed171b8b341d4451599bdea9d
+Author: MLusk02 <msl6269@rit.edu>
+Date:   Tue Feb 13 19:11:32 2024 -0500
+
+    some commit message
+
+commit 58e0330184fd22f591ff31e350245e3d12e48ecf
+Merge: a9610f6 83c8d9d
+Author: larat <lyt2270@rit.edu>
+Date:   Tue Feb 13 19:06:24 2024 -0500
+
+    Merge branch 'main' of https://github.com/RIT-SWEN-261-006/team-project-2235-swen-261-06-c-dicespice
+
+commit a9610f6df3a760748f56277be86257bf8dd1d3d6
+Author: larat <lyt2270@rit.edu>
+Date:   Tue Feb 13 19:05:59 2024 -0500
+
+    added my name
+
+commit 83c8d9d277e4b5ead5c70be0a1a9905c7e43f039
+Author: Katie Lawson <krl2943@g.rit.edu>
+Date:   Tue Feb 13 19:05:48 2024 -0500
+
+    added name to README file
+
+commit 62935703b9f98931985b7f264e29e9a0b5495ace
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Mon Feb 12 00:43:37 2024 +0000
+
+    Initial commit
